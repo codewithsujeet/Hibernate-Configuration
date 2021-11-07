@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Hibernate file-based configuration document -->
+ 
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+	 <!-- Load the Driver class -->
+     <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+     
+     <!-- create the database connection -->
+     <property name="connection.url">jdbc:mysql://localhost:3306/hibernatedb</property>
+     
+     <!--  database connection username -->
+     <property name="connection.username">root</property>
+     
+     <!--  database connection password -->
+     <property name="connection.password">ilovemybrother143</property>
+     
+     <!--  mysql dialect with version -->
+     <property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
+     
+     <!-- create the table automatic generation of database schemas directly into the database. -->
+     <property name="hbm2ddl.auto">update</property>
+     
+     <!-- show the query in console window -->
+     <property name="show_sql">true</property>
+     
+     <!-- format the sql query  -->
+     <!-- <property name="format_sql">true</property> -->
+     
+     <!-- mapping file here -->
+     <mapping class="com.hibernate.Student" />
+     <mapping class="com.hibernate.Address"/>
+     
+	</session-factory>
+</hibernate-configuration>
+	
